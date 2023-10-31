@@ -6,13 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Signup Page</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" type="text/css", href="../static/style.css">
+    <script src="../static/script.js"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../styles.css') }}"> -->
+
 </head>
 <body>
     <div class="container">
-        <div class="form-wrapper">
+        <div class="form-wrapper", id="login-form">
             <h2>Login</h2>
-            <form action="#" method="POST">
+            <form action="/login_post" method="post">
                 <div class="form-group">
                     <label for="login-username">Username</label>
                     <input type="text" id="login-username" name="login-username" required>
@@ -22,6 +26,9 @@
                     <input type="password" id="login-password" name="login-password" required>
                 </div>
                 <button type="submit" class="btn">Login</button>
+                {% if login_failed %}
+                <p>Login failed. Please try again.</p>
+                {% endif %}
             </form>
             <div class="form-switch">
                 <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
@@ -31,9 +38,9 @@
             </div> -->
         </div>
 
-        <div class="form-wrapper" id="signup">
+        <div class="form-wrapper" id="signup-form">
             <h2>Sign up</h2>
-            <form action="#" method="POST", id="signup-form">
+            <form action="/signup_post" method="post">
                 <div class="form-group">
                     <label for="signup-firstname">First Name</label>
                     <input type="text" id="signup-firstname" name="signup-firstname" required>
@@ -123,6 +130,17 @@
                         <option value="Prefer_Not_to_Disclose_Sexual_Orientation">Prefer Not to Disclose</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="signup-political-party">Political Party</label>
+                    <select id="signup-political-party" name="signup-political-party">
+                        <option value="Democrat">Democrat</option>
+                        <option value="Independent">Independent</option>
+                        <option value="Republican">Republican</option>
+                        <option value="Undecided">Undecided</option>
+                        <option value="Not_on_the_List_Political_Party">Not on the List</option>
+                        <option value="Prefer_Not_to_Disclose_Political_Party">Prefer Not to Disclose</option>
+                    </select>
+                </div>
                 
                 <div class="form-group">
                     <label for="signup-password">Password</label>
@@ -135,6 +153,11 @@
                 </div>
                 
                 <button type="submit" class="btn">Sign up</button>
+                <!-- <script src="../scripts/script.js"></script> -->
+                {% if signup_failed %}
+                <p>Account already exists. Please try logging in.</p>
+                {% endif %}
+            </form>
             </form>
             <div class="form-switch">
                 <p>Already have an account? <a href="#" id="show-login">Login</a></p>
@@ -145,6 +168,11 @@
         </div>
         
     </div>
-    <script src="../scripts/script.js"></script>
+    <!-- <script src="../scripts/script.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='scripts/script.js') }}"></script> -->
+
+    <!-- <script src="{{ url_for('signup_post', filename='script.js') }}"></script> -->
+
 </body>
 </html>
