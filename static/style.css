@@ -11,36 +11,54 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
+    padding: 20px;
+    margin-right: 40px;
+
 }
 
 .form-wrapper {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    /* padding: 20px; */
+    /* border-radius: 5px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
     text-align: center;
+    margin-left: 60px;
+    /* margin-top: 200px;  */
+    /* margin-bottom: 220px; */
+    /* height: 500px; */
+    /* margin-top: 15px; */
+    /* scroll-behavior: smooth; */
 }
 
-.form-wrapper h2 {
-    margin-bottom: 20px;
-}
+/* .form-wrapper h2 {
+    margin-top: 20px;
+} */
 
-.form-group {
-    margin-bottom: 15px;
-}
+
+/* .form-group {
+    margin-top: 120px;
+
+    /* margin-bottom: 15px;
+    /* padding: 5px; */
+/* }   */ 
+
 
 .form-group label {
     display: block;
     text-align: left;
+    margin-left: 10px;
+    margin-top: 15px;
 }
 
 .form-group input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    /* margin-bottom: 20px; */
+    /* margin-right: 10px; */
 }
 
 .btn {
@@ -50,6 +68,7 @@ body {
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .btn:hover {
@@ -65,13 +84,18 @@ body {
 .phone-inputs {
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    width: 98%;
 }
 
 .phone-inputs input {
     flex: 1;
+    margin-left: 3px;
 }
 
-.phone-separator {
-    margin: 0 5px;
-    font-weight: bold;
+.phone-separator { 
+    margin: 0 3px;
+    /* margin-top: 5px; */
+    /* margin-left: 5px; */
+    /* font-weight: bold; */
 }

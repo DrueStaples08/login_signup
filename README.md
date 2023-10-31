@@ -1,6 +1,11 @@
 # login_signup
 Login / Signup Page for the movie app
 
+## What this API does?
+- Verifies if user is in database or not otherwise they will need to signup. 
+- Once account is created, that user account is saved in database (Big Query)
+
+
 ## Create/Activate Virtual Environment 
 
 A1. Install a Specific Python Version
@@ -52,3 +57,23 @@ create the flask app
 add stylizing
 
 add js for login/signup button to showcase either windown on screen
+
+
+### Authenticate with GCP
+```gcloud auth application-default login```
+
+### Resources
+
+https://flask-restx.readthedocs.io/en/latest/example.html
+
+https://flask-restx.readthedocs.io/en/latest/quickstart.html
+
+
+
+
+### Run Flask App
+```
+FLASK_ENV=development
+FLASK_APP=app.py
+flask run
+```

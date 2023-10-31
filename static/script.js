@@ -30,6 +30,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// Get references to the login and signup form elements
+const loginForm = document.getElementById("login-form");
+const signupForm = document.getElementById("signup-form");
+
+// Get references to the "Sign up" and "Login" links
+const showSignupLink = document.getElementById("show-signup");
+const showLoginLink = document.getElementById("show-login");
+
+// Initially, only show the login form
+loginForm.style.display = "block";
+signupForm.style.display = "none";
+
+// Add click event listeners to the "Sign up" and "Login" links
+showSignupLink.addEventListener("click", () => {
+    loginForm.style.display = "none";
+    signupForm.style.display = "block";
+});
+
+showLoginLink.addEventListener("click", () => {
+    signupForm.style.display = "none";
+    loginForm.style.display = "block";
+});
+
+
 
 
 
