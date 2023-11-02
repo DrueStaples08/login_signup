@@ -53,6 +53,9 @@ def login_fail():
 @app.route('/signup_fail')
 def signup_fail():
     return render_template('index.html', signup_failed=True)
+    # redirect("http://127.0.0.1:5000/signup_fail#")
+    # return render_template('index.html/signup_fail', signup_failed=True)
+
 
 @app.route("/login_post", methods=["POST"], endpoint='login_post')
 def login_post():
