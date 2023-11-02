@@ -77,3 +77,15 @@ FLASK_ENV=development
 FLASK_APP=app.py
 flask run
 ```
+
+or 
+
+### Run Flask App with Swagger UI
+```
+FLASK_ENV=development
+FLASK_APP=swagger_app.py
+python swagger_app.py
+```
+
+
+

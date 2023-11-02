@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
             signupButton.disabled = true;
         }
     });
+
+    // --------Handle signup failure message display
+    const signupFailedMessage = document.getElementById('signup-failed-message');
+    if (signupFailedMessage) {
+        signupFailedMessage.style.display = 'block';
+    }
 });
 
 
@@ -56,6 +62,50 @@ showLoginLink.addEventListener("click", () => {
 
 
 
+
+
+
+// Check if the signup failed and the message is displayed
+const signupFailedMessage = document.querySelector("#signup-failed-message");
+if (signupFailedMessage && signupFailedMessage.style.display === "block") {
+    signupForm.style.display = "block";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+// document.getElementById("signup-link").addEventListener("click", function(e) {
+//     e.preventDefault(); // Prevent the default link behavior
+//     document.getElementById("signup-form").style.display = "block";
+// });
 
 
 // document.addEventListener('DOMContentLoaded', function () {
